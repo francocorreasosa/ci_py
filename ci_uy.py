@@ -45,9 +45,8 @@ class CedulaUruguaya:
 			return 10 - a % 10
 
 	def clean_ci(self, ci):
-		return int(str(ci).replace("-",""))
-		return int(str(ci).replace("/",""))
-		return int(str(ci).replace(".",""))
+		return int(str(ci).replace("-","").replace('.',''))
+
 
 	def validate_ci(self, ci):
 		ci = self.clean_ci(ci)
